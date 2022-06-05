@@ -12,7 +12,7 @@ client.on('guildMemberAdd', (member) => {
 });
 client.on('message' , (message) => {
     if(message.author.id == '145185932281249792') {  // alt account id
-        message.guild.channels.cache.get(message.channel).send( message.author.toString()+ " Eize dafuk hhhhhhh loh gadol");
+        message.channel.send( message.author.toString()+ " Eize dafuk hhhhhhh loh gadol");
     }
 });
 
