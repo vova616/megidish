@@ -1,1 +1,1 @@
-discord: npm install && npm run main.js
+discord: npm install && node ./main.js
