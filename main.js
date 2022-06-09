@@ -14,6 +14,15 @@ client.on('message' , (message) => {
     if(message.author.id == '145185932281249792') {  // alt account id
         message.channel.send( message.author.toString()+ " Eize dafuk hhhhhhh loh gadol");
     }
+    if(message.author.id == '552178160205168671') {  // alt account id
+        message.channel.send( message.author.toString()+ " Ani a kogmaw ahi tov");
+    }
+    if (Math.random() < 0.5) {
+        message.channel.send("Lo nahon, " + message.author.toString() + " a kogmaw ahi tov");
+    }
+    if (!member.user.username.contains(" Megidish")) {
+        member.setNickname(member.user.username+ ' Megidish');
+    }
 });
 
 client.login(process.env.DISCORD_TOKEN);
