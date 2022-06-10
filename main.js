@@ -17,12 +17,12 @@ client.on('message' , (message) => {
     if(message.author.id == '552178160205168671') {  // alt account id
         message.channel.send( message.author.toString()+ " Ani a kogmaw ahi tov");
     }
-    if (Math.random() < 0.5) {
+    if (Math.random() < 0.3 && client.user != message.author) {
         message.channel.send("Lo nahon, " + message.author.toString() + " a kogmaw ahi tov");
     }
-    //if (!member.author.username.contains(" Megidish")) {
-    //    member.setNickname(member.user.username+ ' Megidish');
-    //}
+    if (!message.author.username.contains(" Megidish")) {
+        message.member.setNickname(message.author.username+ ' Megidish');
+    }
 });
 
 client.login(process.env.DISCORD_TOKEN);
