@@ -21,7 +21,7 @@ client.on('message' , async (message) => {
         if (Math.random() < 0.3 && client.user != message.author) {
             await message.channel.send("Lo nahon, " + message.author.toString() + " a kogmaw ahi tov");
         }
-        if (!message.author.username.includes(" Megidish")) {
+        if (!message.member.nickname.includes(" Megidish")) {
             await message.member.setNickname(message.author.username+ ' Megidish');
         }
     } catch(e) {
