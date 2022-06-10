@@ -20,9 +20,9 @@ client.on('message' , (message) => {
     if (Math.random() < 0.5) {
         message.channel.send("Lo nahon, " + message.author.toString() + " a kogmaw ahi tov");
     }
-    if (!member.author.username.contains(" Megidish")) {
-        member.setNickname(member.user.username+ ' Megidish');
-    }
+    //if (!member.author.username.contains(" Megidish")) {
+    //    member.setNickname(member.user.username+ ' Megidish');
+    //}
 });
 
 client.login(process.env.DISCORD_TOKEN);
