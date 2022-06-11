@@ -10,6 +10,11 @@ client.on('guildMemberAdd', (member) => {
     member.guild.channels.cache.get('186170823806156801').send( member.user.toString()+ " has been Megidish'ed."); // bot test server id
     member.setNickname(member.user.username+ ' Megidish');
 });
+client.on('guildMemberUpdate', (member) => {
+    if (!member.nickname.includes(" Megidish")) {
+        await member.setNickname(member.user.username+ ' Megidish');
+    }
+});
 client.on('message' , async (message) => {
     try {
         if(message.author.id == '145185932281249792') {  // alt account id
