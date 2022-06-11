@@ -6,13 +6,21 @@ client.once('ready' , () => {
     console.log('ani oved ahi');
 });
 
-client.on('guildMemberAdd', (member) => {
-    member.guild.channels.cache.get('186170823806156801').send( member.user.toString()+ " has been Megidish'ed."); // bot test server id
-    member.setNickname(member.user.username+ ' Megidish');
-});
-client.on('guildMemberUpdate', (member) => {
-    if (!member.nickname.includes(" Megidish")) {
+client.on('guildMemberAdd', async (member) => {
+    try {
+        await member.guild.channels.cache.get('186170823806156801').send( member.user.toString()+ " has been Megidish'ed."); // bot test server id
         await member.setNickname(member.user.username+ ' Megidish');
+    } catch(e) {
+        console.error(e)   
+    }
+});
+client.on('guildMemberUpdate', async (member) => {
+    try {
+        if (!member.nickname.includes(" Megidish")) {
+            await member.setNickname(member.user.username+ ' Megidish');
+        }
+    } catch(e) {
+        console.error(e)   
     }
 });
 client.on('message' , async (message) => {
