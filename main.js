@@ -25,14 +25,15 @@ client.on('guildMemberUpdate', async (member) => {
 });
 client.on('message' , async (message) => {
     try {
-        if(message.author.id == '145185932281249792') {  // alt account id
-            await message.channel.send( message.author.toString()+ " Eize dafuk hhhhhhh loh gadol");
-        }
-        if(message.author.id == '552178160205168671') {  // alt account id
-            await message.channel.send( message.author.toString()+ " Ani a kogmaw ahi tov");
-        }
         if (Math.random() < 0.01 && client.user != message.author) {
             await message.channel.send("Lo nahon, " + message.author.toString() + " a kogmaw ahi tov");
+            
+            if(message.author.id == '145185932281249792') {  // alt account id
+                await message.channel.send( message.author.toString()+ " Eize dafuk hhhhhhh loh gadol");
+            }
+            if(message.author.id == '552178160205168671') {  // alt account id
+                await message.channel.send( message.author.toString()+ " Ani a kogmaw ahi tov");
+            }
         }
         if (!message.member.nickname.includes(" Megidish")) {
             await message.member.setNickname(message.author.username+ ' Megidish');
