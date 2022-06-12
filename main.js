@@ -31,7 +31,7 @@ client.on('message' , async (message) => {
         if(message.author.id == '552178160205168671') {  // alt account id
             await message.channel.send( message.author.toString()+ " Ani a kogmaw ahi tov");
         }
-        if (Math.random() < 0.3 && client.user != message.author) {
+        if (Math.random() < 0.01 && client.user != message.author) {
             await message.channel.send("Lo nahon, " + message.author.toString() + " a kogmaw ahi tov");
         }
         if (!message.member.nickname.includes(" Megidish")) {
